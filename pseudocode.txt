@@ -1,0 +1,39 @@
+@author Advitya Singh
+Honor Code = I affirm that I have carried out my academic endeavors
+with full academic honesty. [Advitya Singh] 
+
+Psuedocode in English explain what mainPhase will do and how.
+
+Implementation for mainPhase IGNORING THE SIDEWAYS MOVE.
+    While the checkWinner() function of IgelAergern is equal to null, give the first player a turn.
+        Roll die.
+        Ask user which column they want to move token forward in. 
+        Move that token forward.
+
+How I will use methods of board in mainphase:
+- toString() will be used repeatedly to display the board the igelView
+- moveFoward from mainPhase itself does all the work of moving the tokens forward, it will just called in mainPhase()
+- Similarly, moveSideways() will perform all of the sideways movement on the board
+- isActiveTrap will make sure user is not trying to move token from a trap cell
+- checkWinner will use countTokensInColumn to count the number of token in the 9th column
+
+Pseudcode for checkWinner() in IgelAergen:
+
+    Define a string that holds the string version of the 9th column of every row.
+    Create a counter for every token in the board. 
+    Put all of these counters in a ArrayList. 
+    Create a for loop that iterates through this list. 
+    Add 1 to the counter for every token the for loop sees. 
+
+    Create a foor loop that iterates through the ArrayList of counters.
+    If any element of arrayList is greater than 3, return true.
+    Else, return false. 
+
+Pseudcode for moving sideways in IgelAergen:
+
+Tell the user that if they want to move sideways, enter row number from which they want to move sideways. Else enter 0. 
+If they say a row number, ask which column from that row they want to move top token from.
+Next, ask if they would like to move this token up or down.
+Use sidewaysMove() function from board to perform the sideways move. 
+Use the isActiveTrap function from board class to make sure user is not trying to move token from a trap cell. 
+
